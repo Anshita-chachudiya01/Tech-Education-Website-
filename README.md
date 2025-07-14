@@ -47,36 +47,4 @@ TechEducation is a modern AI-powered learning platform designed to guide student
 ### 1. Clone or Download the Repository
 ```bash
 git clone https://github.com/your-username/TechEducation.git
-### 2. Navigate to the Project Directory
-bash
-Copy
-Edit
-cd TechEducation/your_project_folder
-###3. Install Required Python Libraries
-bash
-Copy
-Edit
-pip install -r requirements.txt
-###4. Run Django Development Server
-bash
-Copy
-Edit
-python manage.py runserver
-5. Access the Web App
-Visit: http://127.0.0.1:8000/
-
-###🏆 Goals of TechEducation
-Help students make informed educational decisions.
-
-Promote AI-based personalized learning.
-
-Build a scalable and modular project for educational purposes.
-
-Create a clean, professional, and user-friendly interface.
-
-### Contribution
-Contributions are welcome! If you'd like to contribute, feel free to fork the repository, make your changes, and submit a pull request.
-
-### License
-This project is open-source under the MIT License.
 
