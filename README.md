@@ -1,9 +1,11 @@
 # TechEducation - AI Powered Learning Platform
 
-TechEducation is a modern AI-powered learning platform designed to guide students in their educational journey. This project combines machine learning with web technologies to provide personalized learning recommendations, career guidance, and interactive educational resources. It aims to create a user-friendly environment for students to explore, learn, and grow in the field of technology.
+TechEducation  website is a modern AI-powered learning platform designed to guide students in their educational journey. This project combines machine learning with web technologies to provide personalized learning recommendations, career guidance, and interactive educational resources. It aims to create a user-friendly environment for students to explore, learn, and grow in the field of technology.
 
 ## 🚀 Features
-- **Personalized Learning Recommendation**: Uses machine learning algorithms to suggest courses and resources based on user input.
+- **Personalized Learning Re
+
+commendation**: Uses machine learning algorithms to suggest courses and resources based on user input.
 - **Career Path Predictor**: Helps students choose the right career track using AI predictions.
 - **Interactive Frontend**: Clean and responsive user interface built with HTML, CSS, and JavaScript.
 - **Backend with Django**: Handles AI model predictions, user data management, and API integrations.
