@@ -1,0 +1,341 @@
+    {% extends 'base.html' %}
+    {% block contain %}
+     <br/>
+     <br/>
+     <br/>
+
+     <br/>
+
+     <br/>
+
+
+    
+
+    
+    <style>
+      /* Marquee Styling */
+marquee {
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+    color: white;
+    line-height: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    z-index: 1000;
+    position: relative;
+}
+marquee a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+}
+marquee a:hover {
+    color: #f1c40f;
+}
+
+/* Home Section */
+#home {
+    background: linear-gradient(to right, #f8f9fa, #e0f7fa);
+    padding: 80px 8vw;
+    text-align: center;
+}
+#home h2 {
+    font-size: 3rem;
+    color: #1a237e;
+    margin-bottom: 20px;
+}
+#home p {
+    font-size: 1.1rem;
+    color: #424242;
+    margin: 0 auto 30px;
+    max-width: 700px;
+}
+#home .btn {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+#home .btn a {
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+#home .btn .blue {
+    background-color: #1565c0;
+    color: white;
+}
+#home .btn .blue:hover {
+    background-color: #0d47a1;
+    box-shadow: 0 0 10px rgba(13, 71, 161, 0.3);
+}
+#home .btn .gray {
+    background-color: #e0e0e0;
+    color: #333;
+}
+#home .btn .gray:hover {
+    background-color: #bdbdbd;
+}
+
+/* Feature Section */
+#Feature {
+    padding: 4vw 8vw;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+#Feature h1 {
+    font-size: 2.5rem;
+    color: #263238;
+}
+#Feature p {
+    font-size: 1rem;
+    color: #607d8b;
+    margin-bottom: 20px;
+}
+.fea-base {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+.fea-box {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+.fea-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.fea-box i {
+    font-size: 2.5rem;
+    color: #1565c0;
+    margin-bottom: 10px;
+}
+.fea-box h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+.fea-box p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Enhanced Search Box Styling with Image Background */
+/* Enhanced Search Box Styling */
+.search {
+    margin: 40px auto;
+    max-width: 500px;
+    padding: 40px 30px;
+    text-align: center;
+    background: white,
+                url('images/img1.jpg') no-repeat center center/cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+    color: white;
+    animation: backgroundSlide 15s infinite ease-in-out;
+    transition: background-image 1s ease-in-out;
+}
+
+.search h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.search-form {
+    display: flex;
+    flex-wrap: nowrap;
+    background: white;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.search-form input[type="text"] {
+    flex: 1;
+    padding: 14px 20px;
+    font-size: 1rem;
+    border: 2px;
+    outline: none;
+    color: #333;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+}
+.search-form input[type="text"]::placeholder {
+    color: white;
+}
+
+.search-form input[type="text"]:focus {
+    background: #f1f1f1;
+}
+
+.search-form button {
+    padding: 0 25px;
+    background-color: #0d47a1;
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.search-form button:hover {
+    background-color: #1565c0;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .search {
+        padding: 25px 20px;
+    }
+
+    .search-form {
+        flex-direction: column;
+        border-radius: 20px;
+    }
+
+    .search-form input[type="text"],
+    .search-form button {
+        width: 100%;
+        border-radius: 20px;
+        margin: 5px 0;
+        padding: 12px 18px;
+    }
+}
+
+
+/* Background Animation */
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #home h2 {
+        font-size: 2rem;
+    }
+    #home p {
+        font-size: 1rem;
+    }
+    .fea-box {
+        width: 90%;
+    }
+    .search-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .search-form input[type="text"],
+    .search-form button {
+        border-radius: 25px;
+        margin: 5px 0;
+        width: 100%;
+    }
+}
+
+    </style>
+    <marquee onmouseover="stop()" onmouseout="start()">
+        {% for news in NewsData %}
+          <a href="/newsDetails/{{news.id}}">{{ news.news_title}} </a>&puncsp; &puncsp;
+        {% endfor %}
+    </marquee>
+     
+
+
+
+    <!---home-->
+    <section id="home">
+        <h2>Enhance Your Future With TechEduca</h2>
+        <p>lorem ipsum dolor sit amet consectetur adipisicing elit. perspiciatis neque suscipt aut ullam quisqam 
+            laboriosam eum nesciunt quos, molesties option tenetur 
+            nobis vel sint quis veniam molestiae nemo desrunt autem!
+        </p>
+        <div class ="btn">
+            <a class ="blue" href="/placement">Student Performance Evaluator</a>
+           
+          <!--- <a  class ="gray" href="/Course">Visit Courses</a>-->
+            
+    
+        </div>
+        </div>
+    </section>
+    
+    <!---feacture-->
+    <section id="Feature">
+        <h1>
+        Awesome Features 
+        </h1>
+        <p>Replanish man have thing gathering lights yeilding shall you </p>
+        <br>
+        <div class="search">
+            <form action ="" method="post" class="search-Form">
+                {% csrf_token %}
+                <input type="text" name="search_box" placeholder="Type to search... " required maxlength="70">
+                <button type="submit" class="fas fa-search" name="search"></button>
+            </form>
+        </div>
+            
+        {% for n in ServiceData %}
+        <div class="fea-base">
+            <div class="fea-box">
+                
+                <i class="{{n.service_icon}}"></i>
+                <h3>{{n.service_title}}</h3>
+                <p>{{n.Service_des }}</p>
+
+            </div>
+        {% empty %}
+        No Record found
+        {% endfor %}
+        
+            
+    
+          
+    
+             <!---  <div class="fea-box">
+                    <i class="fa-solid fa-certificate"></i>
+                    <br>
+
+                    <h3>Dell Online Course</h3>
+                    <p>One make creepeth man braring theira firmament won't great heavan</p>
+    
+                </div>
+                
+                
+                    <div class="fea-box">
+                        <i class="fa-solid fa-award"></i>
+                        <br>
+                        <h3>Global Certificate</h3>
+                        <p>One make creepeth man braring theira firmament won't great heavan</p>
+        
+                    </div>
+                -->
+        
+        
+
+
+
+
+       
+   
+
+
+
+    
+            
+        
+    </section>
+    {% endblock %}
+
+
+
+    

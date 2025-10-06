@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% block contain %}
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f7;
+        }
+
+        
+       
+        /* Login form */
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            background-color: #f3f4f7;
+        }
+
+        .login-form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-form h2 {
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .login-form label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #f3f4f7;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background-color: #0056b3;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-form button:hover {
+            background-color: #004999;
+        }
+
+        .login-form .forgot-password {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .login-form .forgot-password a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        .login-form .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        /* Error message styling */
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    
+
+    <!-- Login Form Section -->
+    <div class="login-container">
+        <div class="login-form">
+            <br>
+            <br>
+            <h2>Login to Your Account</h2>
+            <form action="{% url 'login' %}" method="POST">
+                {% csrf_token %}
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <!-- Error message display -->
+                {% if error %}
+                    <div class="error-message">{{ error }}</div>
+                {% endif %}
+
+                <button type="submit">Login</button>
+                
+
+                <div class="forgot-password">
+                    <a href="/registration">Don't have an account? Create one</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    {% endblock %}

@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset + Fonts */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: url('https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.92);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2d3436;
+            font-size: 32px;
+            margin-bottom: 50px;
+            letter-spacing: 1px;
+        }
+
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 22px;
+            color: #0984e3;
+        }
+
+        .card p {
+            margin: 8px 0;
+            line-height: 1.5;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 40px auto 0;
+            padding: 12px 28px;
+            background: linear-gradient(90deg, #6c5ce7, #00cec9);
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: linear-gradient(90deg, #00cec9, #6c5ce7);
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 26px;
+                margin-bottom: 30px;
+            }
+
+            .container {
+                padding: 25px 20px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Meet Our Team</h1>
+    <div class="team">
+        <div class="card">
+            <h3>Anshita Chachudiya</h3>
+            <p><strong>Mobile:</strong> +91-6260163222</p>
+            <p><strong>Role:</strong> Data Analyst & Machine Learning Engineer</p>
+        </div>
+        <div class="card">
+            <h3>Amit Lodhi</h3>
+            <p><strong>Mobile:</strong> +91-9012345678</p>
+            <p><strong>Role:</strong> Backend Developer & Web Developer</p>
+        </div>
+        <div class="card">
+            <h3>Khushi Yadav</h3>
+            <p><strong>Mobile:</strong> +91-9988776655</p>
+            <p><strong>Role:</strong> UI/UX Designer</p>
+        </div>
+        <div class="card">
+            <h3>Abhay Sahu</h3>
+            <p><strong>Mobile:</strong> +91-9123456789</p>
+            <p><strong>Role:</strong> Database System Manager</p>
+        </div>
+    </div>
+
+    <div class="btn-container">
+        <a href="/" class="back-button">Back to Home</a>
+    </div>
+</div>
+</body>
+</html>
